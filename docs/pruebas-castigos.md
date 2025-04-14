@@ -18,8 +18,8 @@
 | 2º | -5 |
 | 3º | -3 |
 | No cumple / pierde | 0 |
-| Castigo leve | -1 |
-| Castigo grave | -2 o -3 |
+| Castigo leve | +1 |
+| Castigo grave | +2 o +3 |
 
 ---
 
@@ -116,13 +116,13 @@ Se entregan en secreto por nota, mensaje, Alexa, etc. Si se cumplen, El Súper l
 
 | Castigo | Descripción | Penalización |
 |---------|-------------|--------------|
-| A | Llevar un objeto absurdo todo el día (piña, peluche, etc.) | -1 |
-| B | Hablar con acento (elegido por El Súper) durante una hora | -1 |
-| C | Solo poder hablar en tercera persona durante 30 min | -1 |
-| D | Comerse algo que El Súper combine (sin crueldad) | -1 |
-| E | Hacer una declaración de amor a la cámara en directo | -2 |
-| F | Prohibido usar una palabra elegida por el grupo | -1 |
-| G | No poder decir que no durante una hora | -2 |
+| A | Llevar un objeto absurdo todo el día (piña, peluche, etc.) | +1 |
+| B | Hablar con acento (elegido por El Súper) durante una hora | +1 |
+| C | Solo poder hablar en tercera persona durante 30 min | +1 |
+| D | Comerse algo que El Súper combine (sin crueldad) | +1 |
+| E | Hacer una declaración de amor a la cámara en directo | +2 |
+| F | Prohibido usar una palabra elegida por el grupo | +1 |
+| G | No poder decir que no durante una hora | +2 |
 
 ---
 
