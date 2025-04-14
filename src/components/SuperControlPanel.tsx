@@ -24,6 +24,11 @@ const SuperControlPanel = () => {
     audio.play();
   };
 
+  const startGame = () => {
+    // TODO: Implement game start logic (play audio, etc.)
+    alert("¡Juego Iniciado!"); // Placeholder
+  };
+
   return (
     <Card>
       <CardHeader>
@@ -31,6 +36,11 @@ const SuperControlPanel = () => {
         <CardDescription>Activar manualmente la reproducción de audio</CardDescription>
       </CardHeader>
       <CardContent className="grid gap-4">
+        <div>
+          <Button onClick={startGame}>
+            Iniciar Juego
+          </Button>
+        </div>
         <div>
           <h3 className="text-lg font-semibold mb-2">Reproducción de Audio</h3>
           <div className="grid gap-2">
