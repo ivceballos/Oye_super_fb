@@ -71,9 +71,9 @@ Iván dispone de un Panel web o app móvil donde puede:
 
 Enlaces:
 
-    Panel del Súper: https://ivceballos.github.io/panel-super/
+    Panel del Súper: https://www.ivceballos.com/despedida2407/panel-del-super/Panel-super_simple.html
 
-    Gráfico de Ranking: https://ivceballos.github.io/ranking-gh/
+    Gráfico de Ranking: https://ivceballos.com/despedida2407/ranking-gh/ranking.html
 
 Registro de Puntos
 
