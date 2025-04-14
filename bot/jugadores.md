@@ -1,0 +1,15 @@
+# Jugadores disponibles
+
+- Adrián: ["Adrian", "Adrian Ysusi" , "Adri"]
+- Bea: ["Bea", "Bei"]
+- María: ["Maria", "Meri", "Mari"]
+- Paco: ["Paco", "Francisco", "Francisco Jose"]
+- Gonzalo: ["Gonzalo", "Gon"]
+- Rubén: ["Ruben"]
+- Crina: ["Crina", "Cristina"]
+- Álvaro: ["Alvaro"]
+- Aída: ["Aida"]
+- Iván: ["Ivan"]
+- Anita: ["Anita", "Ana"]
+- Adri Cuadrado: ["Adri Cuadrado", "Adrian Cuadrado", "Cuadrado"]
+- Raquel: ["Raquel"]
