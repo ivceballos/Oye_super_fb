@@ -31,7 +31,8 @@ const VoiceResponse = () => {
         <CardDescription>Generate acid, funny, and theatrical voice responses</CardDescription>
       </CardHeader>
       <CardContent className="grid gap-4">
-        <div>
+        {/* Prevent LastPass from injecting content */}
+        <div style={{ position: "relative" }}>
           <Input
             type="text"
             placeholder="Enter voice command"
