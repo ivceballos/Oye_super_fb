@@ -24,36 +24,46 @@ def generar_codigo():
 
 async def mision(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if update.effective_chat.id != MASTER_CHAT_ID:
+        await update.message.reply_text("Solo El Súper puede asignar misiones.")
         return
 
     if len(context.args) == 0:
-        await update.message.reply_text("¿A quién le quieres mandar misión?")
+        await update.message.reply_text("Uso: /mision @username")
         return
 
-    jugador = context.args[0]
-    if jugador not in jugadores:
-        await update.message.reply_text("Jugador no encontrado.")
+    username = context.args[0].replace("@", "")
+    jugador_encontrado = None
+
+    for nombre, datos in jugadores.items():
+        if datos["username"] == username:
+            jugador_encontrado = nombre
+            break
+
+    if not jugador_encontrado:
+        disponibles = [j for j in jugadores if j not in asignadas.values()]
+        sugerencia = ", ".join(disponibles) if disponibles else "Ninguno libre"
+        await update.message.reply_text(f"No encontrado. Jugadores libres: {sugerencia}")
         return
 
     codigo = generar_codigo()
     mision = random.choice(misiones)
 
-    asignadas[jugador] = codigo
+    asignadas[codigo] = jugador_encontrado
 
-    await context.bot.send_message(chat_id=jugadores[jugador],
-        text=f"🔥 Misión secreta de El Súper 🔥\nCódigo de misión: *{codigo}*\n\n{mision}",
+    await context.bot.send_message(chat_id=jugadores[jugador_encontrado]["id"],
+        text=f"🔥 Misión secreta de El Súper 🔥\nCódigo: *{codigo}*\n\n{mision}",
         parse_mode='Markdown')
 
-    await update.message.reply_text(f"Misión enviada a {jugador} con código {codigo}.")
+    await update.message.reply_text(f"Misión enviada a {jugador_encontrado} con código {codigo}")
 
 async def log(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if update.effective_chat.id != MASTER_CHAT_ID:
         return
     if not asignadas:
-        await update.message.reply_text("Ninguna misión asignada aún.")
-    else:
-        texto = "\n".join([f"{j} → Código: {c}" for j, c in asignadas.items()])
-        await update.message.reply_text(texto)
+        await update.message.reply_text("Ninguna misión asignada.")
+        return
+    text = "\n".join([f"{codigo} → {jugador}" for codigo, jugador in asignadas.items()])
+    await update.message.reply_text(text)
 
 async def reset(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if update.effective_chat.id != MASTER_CHAT_ID:
