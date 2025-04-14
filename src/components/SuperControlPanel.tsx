@@ -27,12 +27,12 @@ const SuperControlPanel = () => {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Super's Control Panel</CardTitle>
-        <CardDescription>Manually trigger audio playback</CardDescription>
+        <CardTitle>Panel de Control del Súper</CardTitle>
+        <CardDescription>Activar manualmente la reproducción de audio</CardDescription>
       </CardHeader>
       <CardContent className="grid gap-4">
         <div>
-          <h3 className="text-lg font-semibold mb-2">Audio Playback</h3>
+          <h3 className="text-lg font-semibold mb-2">Reproducción de Audio</h3>
           <div className="grid gap-2">
             {audioClips.map((clip) => (
               <Button key={clip.url} onClick={() => playAudio(clip.url)}>
@@ -43,7 +43,7 @@ const SuperControlPanel = () => {
         </div>
         {selectedAudio && (
           <div>
-            <p>Now Playing: {selectedAudio}</p>
+            <p>Reproduciendo: {selectedAudio}</p>
           </div>
         )}
       </CardContent>

@@ -28,13 +28,13 @@ export default function Home() {
             <SidebarMenuItem>
               <SidebarMenuButton href="#" isActive>
                 <DashboardIcon className="mr-2 h-4 w-4" />
-                <span>Dashboard</span>
+                <span>Panel Principal</span>
               </SidebarMenuButton>
             </SidebarMenuItem>
             <SidebarMenuItem>
               <SidebarMenuButton href="#control-panel">
                 <DashboardIcon className="mr-2 h-4 w-4" />
-                <span>Control Panel</span>
+                <span>Panel de Control</span>
               </SidebarMenuButton>
             </SidebarMenuItem>
               <SidebarMenuItem>
@@ -46,13 +46,13 @@ export default function Home() {
               <SidebarMenuItem>
                 <SidebarMenuButton href="#voice">
                   <DashboardIcon className="mr-2 h-4 w-4" />
-                  <span>Voice Response</span>
+                  <span>Respuesta de Voz</span>
                 </SidebarMenuButton>
               </SidebarMenuItem>
             <SidebarMenuItem>
               <SidebarMenuButton href="#nomination">
                 <DashboardIcon className="mr-2 h-4 w-4" />
-                <span>Nomination</span>
+                <span>Nominación</span>
               </SidebarMenuButton>
             </SidebarMenuItem>
           </SidebarMenu>
@@ -76,3 +76,4 @@ export default function Home() {
     </SidebarProvider>
   );
 }
+

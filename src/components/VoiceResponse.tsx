@@ -18,7 +18,7 @@ const VoiceResponse = () => {
       setResponse(result.response);
     } catch (error) {
       console.error("Error generating voice response:", error);
-      setResponse("Error generating voice response.");
+      setResponse("Error al generar la respuesta de voz.");
     } finally {
       setIsLoading(false);
     }
@@ -27,25 +27,25 @@ const VoiceResponse = () => {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Voice Response System</CardTitle>
-        <CardDescription>Generate acid, funny, and theatrical voice responses</CardDescription>
+        <CardTitle>Sistema de Respuesta de Voz</CardTitle>
+        <CardDescription>Genera respuestas de voz ácidas, divertidas y teatrales</CardDescription>
       </CardHeader>
       <CardContent className="grid gap-4">
         {/* Prevent LastPass from injecting content */}
         <div style={{ position: "relative" }}>
           <Input
             type="text"
-            placeholder="Enter voice command"
+            placeholder="Introduce el comando de voz"
             value={command}
             onChange={(e) => setCommand(e.target.value)}
           />
         </div>
         <Button onClick={handleVoiceResponse} disabled={isLoading}>
-          {isLoading ? "Generating..." : "Generate Voice Response"}
+          {isLoading ? "Generando..." : "Generar Respuesta de Voz"}
         </Button>
         {response && (
           <div>
-            <h3>Response:</h3>
+            <h3>Respuesta:</h3>
             <p>{response}</p>
           </div>
         )}

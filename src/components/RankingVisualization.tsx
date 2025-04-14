@@ -28,19 +28,19 @@ const RankingVisualization = () => {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Ranking Visualization</CardTitle>
-        <CardDescription>Real-time ranking of players</CardDescription>
+        <CardTitle>Visualización del Ranking</CardTitle>
+        <CardDescription>Ranking de jugadores en tiempo real</CardDescription>
       </CardHeader>
       <CardContent className="overflow-auto">
         <Table>
-          <TableCaption>A list of players and their current rankings.</TableCaption>
+          <TableCaption>Lista de jugadores y su ranking actual.</TableCaption>
           <TableHeader>
             <TableRow>
-              <TableHead className="w-[100px]">Date</TableHead>
-              <TableHead>Position</TableHead>
-              <TableHead>Player</TableHead>
-              <TableHead>Points</TableHead>
-              <TableHead>Day</TableHead>
+              <TableHead className="w-[100px]">Fecha</TableHead>
+              <TableHead>Posición</TableHead>
+              <TableHead>Jugador</TableHead>
+              <TableHead>Puntos</TableHead>
+              <TableHead>Día</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>

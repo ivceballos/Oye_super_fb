@@ -28,14 +28,14 @@ const NominationProcessing = () => {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Nomination Recording &amp; Processing</CardTitle>
-        <CardDescription>AI-powered tool to record, transcribe, and extract nominations</CardDescription>
+        <CardTitle>Grabación y Procesamiento de Nominaciones</CardTitle>
+        <CardDescription>Herramienta con IA para grabar, transcribir y extraer nominaciones</CardDescription>
       </CardHeader>
       <CardContent className="grid gap-4">
         <div>
           <Input
             type="text"
-            placeholder="Audio URL"
+            placeholder="URL del Audio"
             value={audioUrl}
             onChange={(e) => setAudioUrl(e.target.value)}
           />
@@ -43,18 +43,18 @@ const NominationProcessing = () => {
         <div>
           <Input
             type="text"
-            placeholder="Player ID"
+            placeholder="ID del Jugador"
             value={playerId}
             onChange={(e) => setPlayerId(e.target.value)}
           />
         </div>
         <Button onClick={handleNominationProcessing} disabled={isLoading}>
-          {isLoading ? "Processing..." : "Process Nomination"}
+          {isLoading ? "Procesando..." : "Procesar Nominación"}
         </Button>
 
         {nominations && (
           <div>
-            <h3>Nominations:</h3>
+            <h3>Nominaciones:</h3>
             <pre>{JSON.stringify(nominations, null, 2)}</pre>
           </div>
         )}
